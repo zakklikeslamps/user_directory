@@ -32,7 +32,7 @@ const Table = (props) => {
                     const dob = props.formatDate(employee.dob.date);
 
                     return (
-                        <tr key={employee.login.uuid}>
+                        <tr key={employee.login}>
                             <td>
                                 <img src={employee.picture.thumbnail} alt={fullName} />
                             </td>
@@ -46,7 +46,7 @@ const Table = (props) => {
                             <td className="align-middle email">
                                 <a href={`mailto:${employee.email}`}>{employee.email}</a>
                             </td>
-                            
+
                             <td className="align-middle">{dob}</td>
                         </tr>
                     );

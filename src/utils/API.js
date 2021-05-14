@@ -1,10 +1,13 @@
 import axios from "axios";
+const BASEURL = "https://randomuser.me/api/?results=25&nat=fr&seed=foobar&exc=login,registered";
 
-
-// eslint-disable-next-line import/no-anonymous-default-export 
+//eslint-disable-next-line import/no-anonymous-default-export 
 //Ask Steve G if he found solution
-export default {
+
+const exportDefault = {
     getRandomUsers: function() {
-        return axios.get('https://randomuser.me/api/?results=40&nat=us&seed=abc');
-    }
-};
+        return axios.get(BASEURL);
+    },
+}
+
+export default exportDefault

@@ -21,7 +21,7 @@ class Container extends Component {
     };
 
     componentDidMount() {
-        API.getRandomEmployees()
+        API.getRandomUsers()
         .then((res) => 
             this.setState({
             employees: res.data.results,
